@@ -1,22 +1,22 @@
 import { api } from "../client";
 import type {
-    SocialLinksData,
-    CreateSocialLinksData,
-    UpdateSocialLinksData
+    ProjectData,
+    CreateProjectData,
+    UpdateProjectData
 } from "@/lib/types";
 
 export const educationApi = {
-    listPublic: () => api.get<SocialLinksData[]>("/projects"),
+    listPublic: () => api.get<ProjectData[]>("/projects"),
 
-    getPublic: (id: string) => api.get<SocialLinksData>(`/projects${id}`),
+    getPublic: (slug: string) => api.get<ProjectData>(`/projects${slug}`),
 
-    list: () => api.get<SocialLinksData[]>("/admin/projects"),
+    list: () => api.get<ProjectData[]>("/admin/projects"),
 
-    get: (id: string) => api.get<SocialLinksData>(`/admin/projects${id}`),
+    get: (slug: string) => api.get<ProjectData>(`/admin/projects${slug}`),
 
-    create: (data: CreateSocialLinksData) => api.post<SocialLinksData>("/admin/projects", data),
+    create: (data: CreateProjectData) => api.post<ProjectData>("/admin/projects", data),
 
-    update: (id:string, data: UpdateSocialLinksData) => api.patch<SocialLinksData>(`/admin/projects${id}`, data),
+    update: (slug:string, data: UpdateProjectData) => api.patch<ProjectData>(`/admin/projects${slug}`, data),
 
-    delete: (id: string) => api.delete<{ id: string | null }>(`/admin/projects${id}`),
+    delete: (slug: string) => api.delete<{ slug: string | null }>(`/admin/projects${slug}`),
 }
