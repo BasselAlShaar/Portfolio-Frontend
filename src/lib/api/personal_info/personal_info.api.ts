@@ -5,7 +5,9 @@ import type {
 } from "@/lib/types";
 
 export const educationApi = {
-    get: () => api.get<PersonalInfoData[]>("/personal_info"),
+    getPublic: () => api.get<PersonalInfoData[]>("/personal_info"),
 
-    update: (data: UpdatePersonalInfoData) => api.patch<PersonalInfoData>(`/personal_info`, data),
+    get: () => api.get<PersonalInfoData[]>("/admin/personal_info"),
+
+    update: (data: UpdatePersonalInfoData) => api.patch<PersonalInfoData>(`/admin/personal_info`, data),
 }

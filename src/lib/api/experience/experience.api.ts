@@ -8,11 +8,11 @@ import type {
 export const educationApi = {
     list: () => api.get<ExperienceData[]>("/experience"),
 
-    get: (id: string) => api.get<ExperienceData>(`/experience/${id}`),
+    get: (id: string) => api.get<ExperienceData>(`/admin/experience/${id}`),
 
-    create: (data: CreateExperienceData) => api.post<ExperienceData>("/experience", data),
+    create: (data: CreateExperienceData) => api.post<ExperienceData>("/admin/experience", data),
 
-    update: (id:string, data: UpdateExperienceData) => api.patch<ExperienceData>(`/experience/${id}`, data),
+    update: (id:string, data: UpdateExperienceData) => api.patch<ExperienceData>(`/admin/experience/${id}`, data),
     
-    delete: (id: string) => api.delete<{ id: string | null }>(`/experience/${id}`),
+    delete: (id: string) => api.delete<{ id: string | null }>(`/admin/experience/${id}`),
 }
