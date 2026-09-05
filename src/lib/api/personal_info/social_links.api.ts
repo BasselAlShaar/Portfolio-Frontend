@@ -5,7 +5,7 @@ import type {
     UpdateSocialLinksData
 } from "@/lib/types";
 
-export const educationApi = {
+export const socialLinksApi = {
     list: () => api.get<SocialLinksData[]>("/admin/personal_info/links"),
 
     get: (id: string) => api.get<SocialLinksData>(`/admin/personal_info/links${id}`),

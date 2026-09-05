@@ -4,7 +4,7 @@ import type {
     UpdatePersonalInfoData
 } from "@/lib/types";
 
-export const educationApi = {
+export const personalInfoApi = {
     getPublic: () => api.get<PersonalInfoData[]>("/personal_info"),
 
     get: () => api.get<PersonalInfoData[]>("/admin/personal_info"),

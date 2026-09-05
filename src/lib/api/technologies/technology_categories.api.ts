@@ -5,7 +5,7 @@ import type {
     UpdateTechnologiesCategoryData
 } from "@/lib/types";
 
-export const educationApi = {
+export const technologyCategoriesApi = {
     list: () => api.get<TechnologiesCategoryData[]>(`/admin/technologies/categories`),
 
     get: (id: string) => api.get<TechnologiesCategoryData>(`/admin/technologies/categories${id}`),

@@ -5,7 +5,7 @@ import type {
     UpdateEducationAchievementsData
 } from "@/lib/types";
 
-export const educationApi = {
+export const educationAchievementsApi = {
     list: () => api.get<EducationAchievementsData[]>("/admin/education/achievements"),
 
     get: (id: string) => api.get<EducationAchievementsData>(`/admin/education/achievements/${id}`),

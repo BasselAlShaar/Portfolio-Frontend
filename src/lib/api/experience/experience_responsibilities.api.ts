@@ -5,7 +5,7 @@ import type {
     UpdateExperienceResponsibilitiesData
 } from "@/lib/types";
 
-export const educationApi = {
+export const experienceResponsibilitiesApi = {
     list: () => api.get<ExperienceResponsibilitiesData[]>("/admin/experience/responsibilities"),
 
     get: (id: string) => api.get<ExperienceResponsibilitiesData>(`/admin/experience/responsibilities/${id}`),

@@ -5,7 +5,7 @@ import type {
     UpdateResumeData
 } from "@/lib/types";
 
-export const educationApi = {
+export const resumeApi = {
     getActive: () => api.get<ResumesData[]>("/personal_info/resume"),
 
     list: () => api.get<ResumesData[]>("/admin/personal_info/resume"),

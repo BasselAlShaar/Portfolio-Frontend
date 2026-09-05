@@ -5,7 +5,7 @@ import type {
     UpdateProjectLinksData
 } from "@/lib/types";
 
-export const educationApi = {
+export const projectLinksApi = {
     list: (slug: string) => api.get<ProjectLinksData[]>(`/admin/projects/links/all/${slug}`),
 
     get: (id: string) => api.get<ProjectLinksData>(`/admin/projects/links${id}`),

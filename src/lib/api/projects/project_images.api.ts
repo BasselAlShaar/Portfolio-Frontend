@@ -5,7 +5,7 @@ import type {
     UpdateProjectImagesData
 } from "@/lib/types";
 
-export const educationApi = {
+export const projectImagesApi = {
     list: (slug: string) => api.get<ProjectImagesData[]>(`/admin/projects/images/all/${slug}`),
 
     get: (id: string) => api.get<ProjectImagesData>(`/admin/projects/images${id}`),

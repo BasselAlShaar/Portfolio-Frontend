@@ -5,7 +5,7 @@ import type {
     UpdateProjectChallengesData
 } from "@/lib/types";
 
-export const educationApi = {
+export const projectChallengesApi = {
     list: (slug: string) => api.get<ProjectChallengesData[]>(`/admin/projects/challenges/all/${slug}`),
 
     get: (id: string) => api.get<ProjectChallengesData>(`/admin/projects/challenges${id}`),
