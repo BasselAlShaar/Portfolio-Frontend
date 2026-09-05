@@ -1,3 +1,5 @@
+import type { CreateEducationAchievementsData } from "./education_achievements";
+
 export interface EducationData {
     institution_name: string;
     institution_url?: string | null;
@@ -12,21 +14,7 @@ export interface EducationData {
 }
 
 export interface CreateEducationData extends EducationData {
-    achievements?: CreateEducationAchievementData[];
-}
-
-export interface CreateEducationAchievementData {
-
-    // Short title for the achievement.
-    title: string;
-
-    // Optional additional context.
-    description?: string | null;
-
-    // Controls display order.
-    display_order: number;
+    achievements?: CreateEducationAchievementsData[];
 }
 
 export type UpdateEducationData = Partial<EducationData>;
-
-export type UpdateEducationAchievementData = Partial<CreateEducationAchievementData>;
